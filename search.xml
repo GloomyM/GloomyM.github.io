@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>如何导入数据库</title>
+      <title>数据库的附加和分离</title>
       <link href="/2020/04/07/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
       <url>/2020/04/07/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
       
-        <content type="html"><![CDATA[<h3 id="如何导入数据库："><a href="#如何导入数据库：" class="headerlink" title="如何导入数据库："></a>如何导入数据库：</h3><a id="more"></a><p>首先进入SQL Server Management Studio进入如下界面：</p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/Image_01.PNG" style="zoom:70%;" / loading="lazy"><p>右击数据库点击附加进入如下界面：</p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/Image_02.PNG" style="zoom:60%;" / loading="lazy"><p>点击添加，进入mdf文件的目录（这里推荐新建一个文件夹用来存储数据库，更有条理）选择mdf文件进行添加</p><p>如果碰到报错：”附加数据库出错”，请进入数据库所在文件，对数据库的mdf和ldf的安全权限重新设置，右击mdf文件，选择属性</p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/Image_03.PNG" style="zoom:60%;" / loading="lazy"><p>点击安全，选择Authenticated点击编辑，勾选完全控制并确认，对ldf文件执行同样操作，然后再对数据库进行添加。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="数据库的附加："><a href="#数据库的附加：" class="headerlink" title="数据库的附加："></a>数据库的附加：</h3><a id="more"></a><p>首先进入SQL Server Management Studio进入如下界面：</p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/Image_01.PNG" style="zoom:70%;" / loading="lazy"><p>右击数据库点击附加进入如下界面：</p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/Image_02.PNG" style="zoom:60%;" / loading="lazy"><p>点击添加，进入mdf文件的目录（这里推荐新建一个文件夹用来存储数据库，更有条理）选择mdf文件进行添加</p><p>如果碰到报错：”附加数据库出错”，请进入数据库所在文件，对数据库的mdf和ldf的安全权限重新设置，右击mdf文件，选择属性</p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/Image_03.PNG" style="zoom:60%;" / loading="lazy"><p>点击安全，选择Authenticated点击编辑，勾选完全控制并确认，对ldf文件执行同样操作，然后再对数据库进行添加。</p><h3 id="数据库的分离："><a href="#数据库的分离：" class="headerlink" title="数据库的分离："></a>数据库的分离：</h3><p>点击数据库选择你需要分离的数据库，右击选择任务，分离，点击确认，数据库分离完成</p>]]></content>
       
       
       <categories>
