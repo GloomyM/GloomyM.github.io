@@ -126,13 +126,14 @@ body::before {
   height: 100%;
   z-index: -1;
   opacity: 0.8;
-  background-image: url("https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/1.jpg");
+  background-image: url("https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/Site-Background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   animation-name: bgFadeIn;
   animation-duration: 2s;
   opacity: 0.8;
+  filter: blur(0px);
 }
 @-moz-keyframes bgFadeIn {
   from {
@@ -187,7 +188,7 @@ body::before {
   bottom: 0;
 }
 .char {
-  font-family: Noto Serif SC, '华文楷体', KaiTi, Roboto, serif;
+  font-family: 'Noto Serif SC', '宋体-简', '华文楷体', KaiTi, Roboto, serif;
   font-size: var(--banner-char-size);
   font-weight: 900;
   background-color: rgba(255,255,255,0.5);
@@ -482,7 +483,7 @@ body::before {
   padding-left: 0.6rem;
 }
 .link-item .link-blog {
-  font-family: Noto Serif SC, '华文楷体', KaiTi, Roboto, serif;
+  font-family: 'Noto Serif SC', '宋体-简', '华文楷体', KaiTi, Roboto, serif;
   font-weight: 900;
   margin: 0.42rem 0;
 }
@@ -1029,7 +1030,7 @@ body::before {
   padding: 10px;
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: Noto Serif SC, '华文楷体', KaiTi, Roboto, serif;
+  font-family: 'Noto Serif SC', '宋体-简', '华文楷体', KaiTi, Roboto, serif;
 }
 .post-header .post-title .post-title-link {
   position: relative;
@@ -1605,7 +1606,7 @@ td {
 }
 .site-name {
   color: #303133;
-  font-family: Noto Serif SC, '华文楷体', KaiTi, Roboto, serif;
+  font-family: 'Noto Serif SC', '宋体-简', '华文楷体', KaiTi, Roboto, serif;
   font-weight: bold;
 }
 .site-subtitle {
@@ -1706,7 +1707,7 @@ td {
   padding: 0.6rem 0;
 }
 #local-search-result ul.search-result-list li .search-result-title {
-  font-family: Noto Serif SC, '华文楷体', KaiTi, Roboto, serif;
+  font-family: 'Noto Serif SC', '宋体-简', '华文楷体', KaiTi, Roboto, serif;
   font-weight: 900;
   font-size: 1.2rem;
 }
@@ -1754,7 +1755,7 @@ td {
   box-sizing: border-box;
   width: 90%;
   max-width: 800px;
-  font-family: Noto Serif SC, '华文楷体', KaiTi, Roboto, serif;
+  font-family: 'Noto Serif SC', '宋体-简', '华文楷体', KaiTi, Roboto, serif;
   font-weight: 900;
   text-align: center;
 }
@@ -1798,7 +1799,7 @@ td {
 #say {
   display: block;
   text-align: center;
-  font-family: Noto Serif SC, '华文楷体', KaiTi, Roboto, serif;
+  font-family: 'Noto Serif SC', '宋体-简', '华文楷体', KaiTi, Roboto, serif;
   font-weight: bold;
   padding: 0.5rem;
   border-top: 1px solid #000;
