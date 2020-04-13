@@ -973,10 +973,8 @@ body::before {
 }
 .post-collapse .post-header {
   position: relative;
-  text-align: left;
   border-bottom: 2px solid rgba(255,127,80,0.3);
   display: flex;
-  justify-content: end;
 }
 .post-collapse .post-header::before {
   content: '';
