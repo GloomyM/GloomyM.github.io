@@ -1191,6 +1191,9 @@ body::before {
 .post-markdown iframe:hover {
   box-shadow: 0 2px 20px 0 rgba(0,0,0,0.12);
 }
+.post-markdown strong {
+  font-weight: bold;
+}
 .post-nav {
   width: 100%;
   display: flex;
