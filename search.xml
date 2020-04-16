@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>数据库四大查询</title>
+      <link href="/2020/04/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/"/>
+      <url>/2020/04/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="单表查询"><a href="#单表查询" class="headerlink" title="单表查询"></a>单表查询</h2><p>单表查询顾名思义，就是查询的所有内容都在一张表里，构成形式相对简单，select from语句结合where，查询需要的元组</p><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 属性名<span class="token keyword">from</span> 表名<span class="token keyword">where</span> 条件</code></pre><p>单独的select from语句用来查询列，加入固定的条件后查询元组，其实就是英语里的定语从句，从后往前翻译，非常简单</p><h2 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h2><p>连接查询就是多个表进行查询，比如我想查询满足某条件的学生姓名，但是学生姓名在表1里，而需要满足的条件需要在表2里进行查询，这样就用到了连接查询，归根到底还是英语里的定语从句，从后往前翻译就行了，思路清晰🙃连接查询里还有一些聚合函数，感觉不是很复杂，这里就不多介绍了，但是要区分一些count和sum的用法，sum是求和，count是求行的个数（也就是元组）</p><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 属性名<span class="token keyword">from</span> 表<span class="token number">1</span><span class="token punctuation">,</span>表<span class="token number">2</span><span class="token keyword">where</span> 条件</code></pre><h2 id="嵌套查询"><a href="#嵌套查询" class="headerlink" title="嵌套查询"></a>嵌套查询</h2><p>嵌套查询听起来很难，但仔细分析理解后很容易发现，就是在普通查询的基础上进行for循环，他的执行方式与for循环完全一致（嵌套的层数取决于你的问题），只要思路清晰也很好理解，感觉很多嵌套查询也可以用连接查询完成，还是推荐连接，因为嵌套耗时较多（就像for循环一样，循环层数越多，时间复杂度越高），注意一些谓词的用法就好，比如in，exists等，exists有些难理解，多做做题会感觉好很多</p><pre class=" language-sql"><code class="language-sql"><span class="token keyword">select</span> 属性名<span class="token keyword">from</span> 表名<span class="token keyword">where</span> 条件<span class="token punctuation">(</span>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token keyword">where</span> 条件<span class="token punctuation">(</span>        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习历程 </category>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>快乐聚会呀~~</title>
       <link href="/2020/04/12/4-12%E8%81%9A%E4%BC%9A/"/>
       <url>/2020/04/12/4-12%E8%81%9A%E4%BC%9A/</url>
