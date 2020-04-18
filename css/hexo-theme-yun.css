@@ -850,7 +850,6 @@ body::before {
 }
 .post-card-excerpt,
 .post-card-excerpt p {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: left;
