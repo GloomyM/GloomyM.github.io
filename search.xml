@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Java多态</title>
+      <link href="/2020/04/23/Java%E5%A4%9A%E6%80%81/"/>
+      <url>/2020/04/23/Java%E5%A4%9A%E6%80%81/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><p><strong>多态</strong>是继封装、继承之后，面向对象的第三大特性。</p><p>现实事物经常会体现出多种形态，如学生，学生是人的一种，则一个具体的同学张三既是<strong>学生</strong>也是<strong>人</strong>，即出现<strong>两种形态</strong>。                                                     </p><p>Java作为面向对象的语言，同样可以描述一个事物的多种形态。如Student类继承了Person类，一个Student的对象便既是Student，又是Person。</p><p>Java中多态的代码体现在一个子类对象(实现类对象)既可以给这个子类(实现类对象)引用变量赋值，又可以给这个子类的父类类型变量赋值。</p><h3 id="多态实例："><a href="#多态实例：" class="headerlink" title="多态实例："></a>多态实例：</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>多态<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/** * 多态 *  只能调用父类里的成员变量 *  可以对父类里的方法进行重写 *  编译看左，运行看右 *   * * instanceof 用来判断类型 * */</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">demo01</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        Fu f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Zi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//这里输出的是父类的num值</span>        f<span class="token punctuation">.</span><span class="token function">func1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//这里执行的是子类的方法</span>        <span class="token keyword">if</span><span class="token punctuation">(</span>f <span class="token keyword">instanceof</span> <span class="token class-name">Fu</span><span class="token punctuation">)</span><span class="token punctuation">{</span>            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是Fu类型的"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">else</span><span class="token punctuation">{</span>            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是Zi类型的"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">class</span> <span class="token class-name">Fu</span><span class="token punctuation">{</span>    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">func1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是父类的func1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">class</span> <span class="token class-name">Zi</span> <span class="token keyword">extends</span>  <span class="token class-name">Fu</span><span class="token punctuation">{</span>    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>    <span class="token annotation punctuation">@Override</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">func1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我是子类的func1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//子类对父类的func1方法重写</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习历程 </category>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java继承封装复习实例</title>
       <link href="/2020/04/23/Java%E7%BB%A7%E6%89%BF%E5%B0%81%E8%A3%85%E5%A4%8D%E4%B9%A0%E5%AE%9E%E4%BE%8B/"/>
       <url>/2020/04/23/Java%E7%BB%A7%E6%89%BF%E5%B0%81%E8%A3%85%E5%A4%8D%E4%B9%A0%E5%AE%9E%E4%BE%8B/</url>
