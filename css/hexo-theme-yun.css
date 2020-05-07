@@ -38,7 +38,7 @@
   text-align: center;
 }
 body {
-  font-family: Lato, 'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif;
+  font-family: 'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -167,7 +167,7 @@ body::before {
     opacity: 0.8;
   }
 }
-.banner {
+#banner {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,7 +188,7 @@ body::before {
   bottom: 0;
 }
 .char {
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-size: var(--banner-char-size);
   font-weight: 900;
   background-color: rgba(255,255,255,0.5);
@@ -226,17 +226,18 @@ body::before {
   animation-timing-function: ease-out;
 }
 .cloud {
+  display: flex;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 8;
   box-sizing: border-box;
 }
 .cloud .waves {
-  position: relative;
   display: flex;
+  position: relative;
   width: 100%;
   height: 100px;
 }
@@ -300,7 +301,7 @@ body::before {
   display: inline-flex;
   position: absolute;
   bottom: 1rem;
-  z-index: 20;
+  z-index: 9;
   animation: float 2s linear infinite;
 }
 #goDown .icon {
@@ -610,7 +611,7 @@ body::before {
   padding-left: 0.6rem;
 }
 .link-item .link-blog {
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
   margin: 0.42rem 0;
 }
@@ -1075,7 +1076,7 @@ body::before {
   background: rgba(255,127,80,0.3);
 }
 .post-collapse .collection-title .archive-year {
-  font-family: 'Courier New', Courier, Consolas, Monaco, monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace;
   color: #862400;
   margin: 0 1.5rem;
 }
@@ -1139,7 +1140,7 @@ body::before {
   margin-right: 0.3rem;
 }
 .post-collapse .post-header .post-meta {
-  font-family: 'Courier New', Courier, Consolas, Monaco, monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace;
   font-size: 1rem;
   margin: 1rem 0 1rem 1.2rem;
   white-space: nowrap;
@@ -1158,7 +1159,7 @@ body::before {
   padding: 10px;
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
 }
 .post-header .post-title .icon {
   width: 1.6rem;
@@ -1253,7 +1254,7 @@ body::before {
 .post-markdown pre,
 .post-markdown code {
   overflow: auto;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace !important;
   font-size: 0.85rem;
   line-height: 1.6;
   border-radius: 3px;
@@ -1600,7 +1601,7 @@ td {
   color: #db2828;
 }
 .post-toc ol .toc-number {
-  font-family: 'Courier New', Courier, Consolas, Monaco, monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace;
 }
 .post-toc ol .toc-child {
   overflow: hidden;
@@ -1758,7 +1759,7 @@ td {
 }
 .site-name {
   color: #303133;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
 }
 .site-subtitle {
@@ -1859,7 +1860,7 @@ td {
   padding: 0.6rem 0;
 }
 #local-search-result ul.search-result-list li .search-result-title {
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
   font-size: 1.2rem;
 }
@@ -1907,7 +1908,7 @@ td {
   box-sizing: border-box;
   width: 90%;
   max-width: 800px;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: 900;
   text-align: center;
 }
@@ -1951,7 +1952,7 @@ td {
 #say {
   display: block;
   text-align: center;
-  font-family: 'Noto Serif SC', 'Songti SC', STZhonngSong, STKaiti, KaiTi, Roboto, serif;
+  font-family: 'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif;
   font-weight: bold;
   padding: 0.5rem;
   border-top: 1px solid #000;
