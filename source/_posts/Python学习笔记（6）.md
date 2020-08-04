@@ -2,6 +2,9 @@
 title: Python组合数据类型
 date: 2019-05-16 22:12:30
 tags: Python
+categories:
+  - 学习历程
+  - Python基础
 ---
 
 

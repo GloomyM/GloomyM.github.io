@@ -2,6 +2,7 @@
 title: PyQt5简介
 date: 2020-04-03 12:00:26
 tags: PyQt5
+categories: 学习历程
 ---
 
 

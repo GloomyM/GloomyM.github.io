@@ -2,6 +2,9 @@
 title: Python文件和数据格式化
 date: 2019-05-17 22:11:23
 tags: Python
+categories:
+  - 学习历程
+  - Python基础
 ---
 
 ## 文件的使用：

@@ -2,6 +2,7 @@
 title: PyDesigner+PyQt5+Pycharm配置
 date: 2020-04-03 13:21:34
 tags: PyQt5
+categories: 学习历程
 ---
 
 ## 简介：
@@ -14,12 +15,12 @@ tags: PyQt5
 
 进入Pycharm后点击左上角的File，在菜单中找到Settings，依次点击Tools,External Tools，如下图：
 
-<img src="/images/Post-Img-1.png" style="zoom:80%;" />
+<img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Post-PyQt5-Pycharm%E9%85%8D%E7%BD%AE/Post-Img-1.png" style="zoom:80%;" />
 
 
 （这里因为我已经提前完成安装，所以上面已经显示了两个插件）点击加号，在Program一栏添加designer的安装路径，其他内容按照下图填写最后点击OK：
 
-<img src="/images/Post-Img-2.png" style="zoom:80%;" />
+<img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Post-PyQt5-Pycharm%E9%85%8D%E7%BD%AE/Post-Img-2.png" style="zoom:80%;" />
 
 在配置PyQt5时同样点击加号，在Name一栏添加PyUic，在Program一栏添加Python的安装路径，Arguments一栏添加：
 

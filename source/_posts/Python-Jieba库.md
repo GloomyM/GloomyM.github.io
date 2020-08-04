@@ -2,6 +2,7 @@
 title: Jieba库
 date: 2019-05-17 22:11:23
 tags: Python
+categories: 学习历程
 ---
 
 ## 简介：

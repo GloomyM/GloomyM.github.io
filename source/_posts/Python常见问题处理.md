@@ -2,6 +2,7 @@
 title: Python常见问题处理
 date: 2019-05-20 18:16:20
 tags: Python
+categories: 学习历程
 ---
 
 ## Python库安装失败：

@@ -2,6 +2,9 @@
 title: Python函数和代码复用
 date: 2019-05-15 19:12:30
 tags: Python
+categories:
+  - 学习历程
+  - Python基础
 ---
 
 ## 函数的定义和使用：

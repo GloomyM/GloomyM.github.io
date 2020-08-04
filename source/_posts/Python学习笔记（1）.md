@@ -2,6 +2,9 @@
 title: Python基本语法元素
 date: 2019-05-10 18:06:38
 tags: Python
+categories: 
+  - 学习历程
+  - Python基础
 ---
 
 ### 输入：

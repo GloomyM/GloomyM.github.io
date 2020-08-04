@@ -1,16 +1,12 @@
 ﻿social:
   - name: GitHub
-    link: https://github.com/
+    link: https://github.com/GloomyM
     icon: icon-github-line
     color: "#181717"
   - name: E-Mail
     link: https://mail.qq.com/
     icon: icon-mail-line
     color: "#8E71C1"
-  - name: 微博
-    link: https://weibo.com/
-    icon: icon-weibo-line
-    color: "#E6162D"
   - name: 网易云音乐
     link: https://music.163.com/#/user/home?id=550169551
     icon: icon-netease-cloud-music-line
@@ -19,10 +15,10 @@
     link: https://www.zhihu.com/people/
     icon: icon-zhihu-line
     color: "#0084FF"
-  - name: 哔哩哔哩
-    link: https://space.bilibili.com/
-    icon: icon-bilibili-line
-    color: "#FF8EB3"
+  - name: CSDN
+    link: https://blog.csdn.net/qq_43591839
+    color: '#d81e06'
+    icon: icon-csdn
 
 symbols_count_time:
   item_text_post: true
@@ -57,6 +53,21 @@ valine:
   meta: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
   visitor: true
+  visitor_index: false
+
+katex:
+  copy_tex: true
+  global: false
+
+
+footer:
+  beian:
+    enable: true
+    icp: 苏ICP备20024766号
+
+
+
+
 
 # https://github.com/ele828/hexo-prism-plugin
 prism_plugin:
@@ -67,19 +78,19 @@ prism_plugin:
 
 avatar:
   enable: true
-  url: /images/avatar.jpg
+  url: https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/Avatar.jpg
   rounded: true
   opacity: 1
   mickey_mouse: true
 
 bg_image:
   enable: true
-  url: /images/bg.jpg
+  url: https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/Site-Background.jpg
   blur: 0px # 设置背景模糊程度
   opacity: 0.8
 
 colors:
-  primary: "#6200ee"
+  primary: "#FF7F50"
   # bg: "#F5F5F5"
   selection_bg: "#8e71c1" # 选取文字时的背景色
   # 标签云中标签的起始色和结束色
@@ -87,14 +98,99 @@ colors:
   # tag_end_color:
 
 reward:
+  methods:
   - name: 支付宝
-    path: images/wechat-pay.jpg
+    path: https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/Ali-Pay.JPG
     color: "#00A3EE"
     icon: icon-alipay-line
   - name: 微信支付
-    path: /images/Ali.JPG
+    path: https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/Wechat-Pay.jpg
     color: "#2DC100"
     icon: icon-wechat-pay-line
 
-cdn:
-  pre: https://cdn.jsdelivr.net/gh/GloomyM/GloomyM.github.io@latest
+pages:
+
+
+banner:
+  enable: true
+  title: 南风知我意
+  src: /js/ui/banner.js
+
+head:
+  css:
+    mouse: https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Css/Mouse/mouse.css
+  js:
+    async:
+      iconfont: //at.alicdn.com/t/font_1738646_0quryxfab6q.js
+      
+
+tags:
+  PyQt5: "#4fc08d"
+  算法: "#026E00"
+  Git: "#F14E32"
+  Linux: "#61dafb"
+  Python: "#3776ab"
+
+categories:
+  学习历程: dimgray
+  生活: Crimson
+
+menu:
+  home:
+    icon: icon-zhuye
+  categories:
+    icon: icon-hanbao_SVG
+  archives:
+    icon: icon-mianbao_SVG
+  tags:
+    icon: icon-bianzufuzhi
+  custom:
+    title: MyGithub
+    path: https://github.com/GloomyM
+    icon: icon-tang_SVG
+
+
+engine_search:
+  enable: false
+
+local_search:
+  enable: true
+  src: /js/search/local-search.js
+
+favicon: https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/Favicon.ico
+
+
+# tag_cloud:
+#   enable: true
+#   width: 300
+#   height: 300
+
+
+
+search:
+  placeholder: "搜索你需要的内容呀~😝"
+  bg_image: https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/Personal-Info/Search_Background.jpg
+
+fireworks:
+  enable: true
+  colors:
+    - "255,105,180"
+    - "238,130,238"
+    - "255,182,193"
+
+baidu_push: true
+
+
+font:
+  cdn:
+    enable: true
+    lib:
+      - https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=Source+Code+Pro&display=swap
+  serif:
+    family: "'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif"
+    weight: 900
+  sans_serif:
+    family: "'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif"
+    weight: 300
+  monospace:
+    family: "'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace"

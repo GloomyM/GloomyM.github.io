@@ -2,6 +2,9 @@
 title: Python基本数据类型
 date: 2019-05-13 09:10:32
 tags: Python
+categories:
+  - 学习历程
+  - Python基础
 ---
 
 ### 数字类型及操作：

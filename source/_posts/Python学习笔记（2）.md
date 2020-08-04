@@ -2,6 +2,9 @@
 title: Python基本图形绘制
 date: 2019-05-12 14:02:31
 tags: Python
+categories:
+  - 学习历程
+  - Python基础
 ---
 
 ### turtle的绘图窗体：
