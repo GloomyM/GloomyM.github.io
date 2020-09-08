@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>网络试验一</title>
+      <link href="/2020/09/08/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C1/"/>
+      <url>/2020/09/08/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C1/</url>
+      
+        <content type="html"><![CDATA[<h3 id="网络试验"><a href="#网络试验" class="headerlink" title="网络试验"></a>网络试验</h3><p>1、创建VLAN并把交换机接口指派到相应的VLAN-ID（测试PC间连通性）</p><p>2、创建trunk链路，测试跨交换机相同VLAN-ID的流量互访</p><a id="more"></a><h3 id="1、创建VLAN并把交换机接口指派到相应的VLAN-ID（测试PC间连通性）"><a href="#1、创建VLAN并把交换机接口指派到相应的VLAN-ID（测试PC间连通性）" class="headerlink" title="1、创建VLAN并把交换机接口指派到相应的VLAN-ID（测试PC间连通性）"></a>1、创建VLAN并把交换机接口指派到相应的VLAN-ID（测试PC间连通性）</h3><p>拓扑：</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG01.png" alt="" loading="lazy"></p><h4 id="具体操作："><a href="#具体操作：" class="headerlink" title="具体操作："></a>具体操作：</h4><p><strong>Tip：为了使PC1与PC2进行连通，要通过配置交换机SW1的Ethernet 0/0/1和Ethernet 0/0/2接口</strong></p><p><strong>对Ethernet 0/0/1接口进行配置：</strong></p><p>[SW1]interface Ethernet0/0/1</p><p>[SW1-Ethernet0/0/1]port link-type access</p><p>[SW1-Ethernet0/0/1]port default vlan 2</p><p><strong>对Ethernet 0/0/2接口进行配置：</strong></p><p>[SW1]interface Ethernet0/0/2</p><p>[SW1-Ethernet0/0/2]port link-type access</p><p>[SW1-Ethernet0/0/2]port default vlan 2</p><p> <img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG02.png" alt="" loading="lazy"></p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG03.png" alt="" loading="lazy"></p><p><strong>配置PC1的IP地址以及子网掩码：</strong></p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG04.png" alt="" loading="lazy"></p><p> <strong>配置PC2的IP地址以及子网掩码</strong></p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG05.png" alt="" loading="lazy"></p><p><strong>测试PC间的连通性：</strong></p><p>测试PC1连通PC2</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG06.png" alt="" loading="lazy"></p><p> 测试PC2连通PC1</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG07.png" alt="" loading="lazy"></p><h3 id="2、创建trunk链路，测试跨交换机相同VLAN-ID的流量互访"><a href="#2、创建trunk链路，测试跨交换机相同VLAN-ID的流量互访" class="headerlink" title="2、创建trunk链路，测试跨交换机相同VLAN-ID的流量互访"></a>2、创建trunk链路，测试跨交换机相同VLAN-ID的流量互访</h3><p><strong>拓扑：</strong></p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG08.png" alt="" loading="lazy"></p><h4 id="具体操作：-1"><a href="#具体操作：-1" class="headerlink" title="具体操作："></a>具体操作：</h4><p><strong>对于SW1：</strong></p><p>首先要配置SW1的Ethernet 0/0/2接口，连接PC1，然后配置Ethernet 0/0/1接口的Trunk链路</p><p><strong>对于SW2：</strong></p><p>首先要配置SW2的Ethernet 0/0/2接口，连接PC1，然后配置Ethernet 0/0/1接口的Trunk链路</p><p><strong>配置SW1的Ethernet0/0/1接口的Trunk链路</strong></p><p>[SW1]interface Ethernet0/0/1</p><p>[SW1-Ethernet0/0/1]port link-type trunk</p><p>[SW1-Ethernet0/0/1]port trunk allow-pass vlan all</p><p>[SW1-Ethernet0/0/1]undo port trunk</p><p>[SW1-Ethernet0/0/1]undo port trunk allow-pass vlan 1</p><p><strong>配置SW1的Ethernet0/0/2接口</strong></p><p>[SW1]interface Ethernet0/0/2</p><p>[SW1-Ethernet0/0/2]port link-type access</p><p>[SW1-Ethernet0/0/2]port default vlan 2</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG09.png" alt="" loading="lazy"></p><p><strong>配置SW2的Ethernet0/0/1接口的Trunk链路</strong></p><p>[SW2]interface Ethernet0/0/1</p><p>[SW2-Ethernet0/0/1]port link-type trunk</p><p>[SW2-Ethernet0/0/1]port trunk allow-pass vlan al</p><p>[SW2-Ethernet0/0/1]undo port trunk allow-pass vlan 1</p><p><strong>配置SW2的Ethernet0/0/2接口</strong></p><p>[SW2]interface Ethernet0/0/2</p><p>[SW2-Ethernet0/0/2]port link-type access</p><p>[SW2-Ethernet0/0/2]port default vlan 2</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG10.png" alt="" loading="lazy"></p><p><strong>配置PC1的IP地址以及子网掩码</strong></p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG11.png" alt="" loading="lazy"></p><p><strong>配置PC2的IP地址以及子网掩码</strong> <img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG12.png" alt="" loading="lazy"></p><p><strong>测试连通性：</strong></p><p>测试PC2与PC1的通信</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG13.png" alt="" loading="lazy"></p><p><strong>测试PC1与PC2的通信</strong></p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C%E4%B8%80/IMG14.png" alt="" loading="lazy"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习历程 </category>
+          
+          <category> 网络试验 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SSM的整合步骤</title>
       <link href="/2020/08/22/SSM%E7%9A%84%E6%95%B4%E5%90%88%E6%AD%A5%E9%AA%A4/"/>
       <url>/2020/08/22/SSM%E7%9A%84%E6%95%B4%E5%90%88%E6%AD%A5%E9%AA%A4/</url>
