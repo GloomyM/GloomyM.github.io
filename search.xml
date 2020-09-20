@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>EVE导入VM详解</title>
+      <link href="/2020/09/20/EVE%E5%AF%BC%E5%85%A5VM%E8%AF%A6%E8%A7%A3/"/>
+      <url>/2020/09/20/EVE%E5%AF%BC%E5%85%A5VM%E8%AF%A6%E8%A7%A3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="EVE的安装步骤"><a href="#EVE的安装步骤" class="headerlink" title="EVE的安装步骤"></a>EVE的安装步骤</h3><p>打开VM进入主页，点击打开虚拟机，选择刚才下载的eve的ovf文件</p><a id="more"></a><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/EVEDES/IMG01.png" alt="" loading="lazy"></p><p>对于安装的目录，尽量不要使用C盘</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/EVEDES/IMG02.png" alt="" loading="lazy"></p><p>导入的过程很慢，导入完成后，编辑此虚拟机，内存尽可能大（当然也要在你电脑本身的内存之内），网络适配器一定要选择NAT模式，其他均无效（装了四次其他的都会出错）</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/EVEDES/IMG03.png" alt="" loading="lazy"></p><p>处理器这里需要勾选虚拟化引擎（切记）</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/EVEDES/IMG04.png" alt="" loading="lazy"></p><p>以上操作完成后，启动此虚拟机，登录用户名为root，密码为eve，登录后，会显更改密码等一系列操作，全部按回车，当配置完成时，虚拟机会重启，再次开机时会显示如下界面</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/EVEDES/IMG05.png" alt="" loading="lazy"></p><p>输入用户名（root），密码（eve），打开浏览器输入上面的地址，然后进入以下WEB界面</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/EVEDES/IMG06.png" alt="" loading="lazy"></p><p>在这个WEB界面中账户为admin，密码为eve，然后成功进入如下界面表示安装成功</p><p><img src="https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/EVEDES/IMG07.png" alt="" loading="lazy"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 网络相关 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络试验一</title>
       <link href="/2020/09/08/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C1/"/>
       <url>/2020/09/08/%E7%BD%91%E7%BB%9C%E8%AF%95%E9%AA%8C1/</url>
