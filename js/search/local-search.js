@@ -4,7 +4,15 @@
 // '<div id="no-result"><svg class="icon"><use xlink:href="#icon-emotion-unhappy-line"></use></svg></div>';
 //- local-search
 
-let searchFunc = function(path, search_id, content_id) {
+/* global CONFIG */
+
+/**
+ * 本地搜索函数
+ * @param {*} path xml 文件路径
+ * @param {*} searchId 搜索框元素 ID
+ * @param {*} contentId 结果框元素 ID
+ */
+const localSearch = (path, searchId, contentId) => {
   "use strict";
   const req = new Request(path);
   let xhr = new XMLHttpRequest();
@@ -22,9 +30,9 @@ let searchFunc = function(path, search_id, content_id) {
           url: entry.querySelector("url").innerHTML,
         });
       });
-      let $input = document.getElementById(search_id);
+      let $input = document.getElementById(searchId);
       if (!$input) return;
-      let $resultContent = document.getElementById(content_id);
+      let $resultContent = document.getElementById(contentId);
       if (document.querySelectorAll("#local-search-input").length > 0) {
         $input.addEventListener("input", function() {
           let str = '<ul class="search-result-list">';
@@ -40,7 +48,7 @@ let searchFunc = function(path, search_id, content_id) {
           // perform local searching
           datas.forEach(function(data) {
             let isMatch = true;
-            let content_index = [];
+            // let content_index = [];
             if (!data.title || data.title.trim() === "") {
               data.title = "Untitled";
             }
@@ -49,7 +57,6 @@ let searchFunc = function(path, search_id, content_id) {
               .trim()
               .replace(/<[^>]+>/g, "")
               .toLowerCase();
-            let data_url = data.url;
             let index_title = -1;
             let index_content = -1;
             let first_occur = -1;
@@ -76,12 +83,7 @@ let searchFunc = function(path, search_id, content_id) {
             }
             // show search results
             if (isMatch) {
-              str +=
-                "<li><a href='" +
-                data_url +
-                "' class='search-result-title'>" +
-                data_title +
-                "</a>";
+              str += `<li><a href="${data.url}" class="search-result-title">${data_title}</a>`;
               let content = data.content.trim().replace(/<[^>]+>/g, "");
               if (first_occur >= 0) {
                 // cut out 100 characters
@@ -125,8 +127,10 @@ let searchFunc = function(path, search_id, content_id) {
   xhr.send();
 };
 
-searchFunc(
-  CONFIG.local_search.path,
-  "local-search-input",
-  "local-search-result"
-);
+document.addEventListener("DOMContentLoaded", () => {
+  localSearch(
+    CONFIG.local_search.path,
+    "local-search-input",
+    "local-search-result"
+  );
+});
