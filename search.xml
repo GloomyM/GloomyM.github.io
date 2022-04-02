@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>激活函数(Activation functions)</title>
+      <link href="/2022/04/01/Numpy-md/"/>
+      <url>/2022/04/01/Numpy-md/</url>
+      
+        <content type="html"><![CDATA[<h2 id="激活函数-Activation-functions"><a href="#激活函数-Activation-functions" class="headerlink" title="激活函数(Activation functions)"></a>激活函数(Activation functions)</h2><h3 id="Sigmoid-quad-a-frac-1-1-e-x"><a href="#Sigmoid-quad-a-frac-1-1-e-x" class="headerlink" title="Sigmoid:$$\quad a=\frac{1}{1 + e^{-x}}$$"></a>Sigmoid:$$\quad a=\frac{1}{1 + e^{-x}}$$</h3><img src='https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/sigmoid.png' loading="lazy"><h3 id="Tanh-a-frac-e-x-e-x-e-x-e-x"><a href="#Tanh-a-frac-e-x-e-x-e-x-e-x" class="headerlink" title="Tanh: $$a=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$"></a>Tanh: $$a=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$</h3><img src='https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/tanh.png' loading="lazy"><h3 id="Relu-a-max-a-0-0"><a href="#Relu-a-max-a-0-0" class="headerlink" title="Relu: $$a=max(a,0.0)$$"></a>Relu: $$a=max(a,0.0)$$</h3><img src='https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/relu.png' loading="lazy">]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DX001</title>
       <link href="/2021/07/08/DX001/"/>
       <url>/2021/07/08/DX001/</url>
