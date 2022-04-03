@@ -4,9 +4,28 @@
   
     
     <entry>
+      <title>梯度下降算法(Gradient descent Algorithm)</title>
+      <link href="/2022/04/02/Gradient%20descent%20Algorithm/"/>
+      <url>/2022/04/02/Gradient%20descent%20Algorithm/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Gradient-descent-Algorithm"><a href="#Gradient-descent-Algorithm" class="headerlink" title="Gradient descent Algorithm"></a>Gradient descent Algorithm</h1><h3 id="Gradient-descent"><a href="#Gradient-descent" class="headerlink" title="Gradient descent"></a>Gradient descent</h3><p><strong>Introduction to Gradient</strong></p><p>很在一元函数中，梯度就是微分，然而在多元函数中梯度就是一个向量，而向量又是有方向的，梯度的方向就指明了函数在给定点的上升最快方向。(假设$$J(\theta)$$由$$\theta_{0},\theta_{1},\theta_{2}$$确定，那么梯度就是$$ \nabla(J) = &lt;\frac{\partial J}{\partial \theta_{0}},\frac{\partial J}{\partial \theta_{1}},\frac{\partial J}{\partial \theta_{2}}&gt;$$)</p><p>为了让代价函数尽可能的小，我们使用梯度下降算法进行优化找到最小值，就是因为梯度的方向指明了函数在给定点的上升最快的方法，那么梯度的反方向也就是下降最快的方向，所以一直沿着梯度走，最后就可以得到代价函数的最小值。</p><p><strong>Gradient descent expression</strong></p><p>$$\Theta^{1} = \Theta^{0}-\alpha\nabla J(\Theta)$$</p><p>$$这里\Theta^{1}代表下一个位置，\Theta^{0}代表当前位置,\alpha可以理解为步长或者学习率，\nabla J(\Theta)为梯度$$</p><p><strong>Tips:</strong></p><ul><li>对于$$\alpha$$来说，如果过于小，那么我们每次优化的幅度也就相当小，这也就意味着我们的梯度优化很慢，如果过于大，那么我们可能直接越过了最小值，或者函数最后发散。</li><li>在梯度下降的过程中，变化幅度会逐渐减小，在一元函数中，我们可以理解为，函数的导数或者说斜率变化越来越小，趋于平缓直到最后的导数为0。</li><li><strong>这里$$\Theta$$可以理解成每一个过程，假设$$J(\theta_{0},\theta_{1})$$，那么$$\Theta_{1}也就是表示(\theta_0,\theta_1)在梯度下降中的取值$$</strong></li></ul><h3 id="Gradient-descent-with-one-variable"><a href="#Gradient-descent-with-one-variable" class="headerlink" title="Gradient descent with one variable"></a>Gradient descent with one variable</h3><p>$$Hypothesis: h_{\theta}(x) = \theta_{0} + \theta_{1}x$$</p><p><strong>Example1</strong></p><p>假设$$J(\theta) = \theta^{3},\alpha=0.2,\Theta^{0} = 1$$</p><p>$$\Theta^{0} = 1$$</p><p>$$\Theta^{1} = \Theta^{0} - \alpha J^{‘}(\Theta^{0}) = 1 - 0.2*3=0.4$$</p><p>$$\Theta^{2} = \Theta^{1} - \alpha J^{‘}(\Theta^{1}) = 0.4 - 0.2*0.48=0.304$$</p><p>$$…$$</p><p>经过两次的梯度优化结果比之前要相对小一些</p><h4 id="Matrix"><a href="#Matrix" class="headerlink" title="Matrix"></a>Matrix</h4><p>在计算结果时我们一般借助矩阵来进行预测</p><p><img src="C:%5CUsers%5C%E6%9D%8E%E4%B9%8B%E8%BE%B0%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220102135251893.png" alt="image-20220102135251893" loading="lazy"></p><p>如上图，我们已经有了$$h_{\theta}(x) = -40+0.25x$$，那么我们只需要构造如上图一样的矩阵，就可以同时算出四个结果对于python代码来说，这仅仅是一行矩阵相乘的代码。</p><p>以上就是关于单一变量变量的梯度下降算法</p><h3 id="Gradient-descent-with-multiple-variables"><a href="#Gradient-descent-with-multiple-variables" class="headerlink" title="Gradient descent with multiple variables"></a>Gradient descent with multiple variables</h3><p>$$Hypothesis:h_{\theta}(x) = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2}+\theta_{3}x_{3}+…+\theta_{n}x_{n}$$</p><p>$$Simplify:$$</p><p><strong>Example2</strong></p><p>假设$$J(\theta) = \theta_{1}^{2} + \theta_{2}^{2},同时\Theta^{0} = (1,3),\alpha=0.1,\nabla J(\Theta) = &lt;2\theta_{1},2\theta_{2}&gt;$$</p><p>$$\Theta^{0} = (1,3)$$</p><p>$$\Theta^{0} = \Theta^0-\alpha\nabla J(\Theta^{0}) = (1,3)-0.1*(2,6) = (0.8,2.4)$$</p><p>$$\Theta^{1} = \Theta^1-\alpha\nabla J(\Theta^{1}) = (0.8,2.4)-0.1*(1.6,4.8) = (0.64,1.92)$$</p><p>$$…$$</p><p>同样经过两次的梯度优化结果比之前要相对小一些</p><h3 id="Feature-Scaling"><a href="#Feature-Scaling" class="headerlink" title="Feature Scaling"></a>Feature Scaling</h3><p>一般来说我们要保证$$-1\leq x_{i} \leq 1$$，当然，如果在这个区间附近，我们也可以接受，但是范围不能太大或太小。</p><h4 id="Mean-normalization"><a href="#Mean-normalization" class="headerlink" title="Mean normalization"></a>Mean normalization</h4><p>Replace $$x_i$$with $$x_i-\mu_i$$ to make features have approximately zero mean (Do not apply to $$x_0=1$$)</p><p>E.g. </p><p>$$x_1=\frac{size-1000}{2000}$$</p><p>$$x_2=\frac{bedrooms-2}{5}$$</p><p>1000 and 2 are mean value of the size of houese and the number of bedrooms</p><p>After the mean normalization,</p><p>$$-0.5\leq x_1 \leq 0.5,-0.5 \leq x_2 \leq 0.5$$</p><p>$$x_i=\frac{x_i-\mu_i}{s_i},\mu_i \rightarrow avg,s1\rightarrow maximum -minimum$$</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>激活函数(Activation functions)</title>
-      <link href="/2022/04/01/Numpy-md/"/>
-      <url>/2022/04/01/Numpy-md/</url>
+      <link href="/2022/04/01/Activation%20Functions/"/>
+      <url>/2022/04/01/Activation%20Functions/</url>
       
         <content type="html"><![CDATA[<h2 id="激活函数-Activation-functions"><a href="#激活函数-Activation-functions" class="headerlink" title="激活函数(Activation functions)"></a>激活函数(Activation functions)</h2><h3 id="Sigmoid-quad-a-frac-1-1-e-x"><a href="#Sigmoid-quad-a-frac-1-1-e-x" class="headerlink" title="Sigmoid:$$\quad a=\frac{1}{1 + e^{-x}}$$"></a>Sigmoid:$$\quad a=\frac{1}{1 + e^{-x}}$$</h3><img src='https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/sigmoid.png' loading="lazy"><h3 id="Tanh-a-frac-e-x-e-x-e-x-e-x"><a href="#Tanh-a-frac-e-x-e-x-e-x-e-x" class="headerlink" title="Tanh: $$a=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$"></a>Tanh: $$a=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$</h3><img src='https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/tanh.png' loading="lazy"><h3 id="Relu-a-max-a-0-0"><a href="#Relu-a-max-a-0-0" class="headerlink" title="Relu: $$a=max(a,0.0)$$"></a>Relu: $$a=max(a,0.0)$$</h3><img src='https://personalblog-1301685299.cos.ap-nanjing.myqcloud.com/MyBlog-Images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/relu.png' loading="lazy">]]></content>
       
